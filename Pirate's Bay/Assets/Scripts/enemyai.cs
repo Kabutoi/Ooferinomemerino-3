@@ -29,7 +29,7 @@ public class enemyai : MonoBehaviour {
         }
 
         //sidenote this will be used for damage but for now it is empty also this small enemy is a melee enemy
-        if (distance >= Stop)
+        if (distance<= Stop)
         {
             
         }
