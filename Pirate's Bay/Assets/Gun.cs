@@ -38,18 +38,18 @@ public class Gun : MonoBehaviour {
 
             Debug.Log(hit.transform.name); // just debug to see if gun was working
 
-            EnemyDamage EnemyDamage = hit.transform.GetComponent<EnemyDamage>(); // this is say enemy damage script is equal to enemy damage 
-            if (EnemyDamage != null)
+            EnemyDamage EnemyDamage = hit.transform.GetComponent<EnemyDamage>();
+            if (EnemyDamage != null) // this is saying if the enemy is taking Enemydamage to make them take damage
             {
                 EnemyDamage.TakeDamage(damage);
             }
 
-            if (hit.rigidbody != null)
+            if (hit.rigidbody != null)  //This is adding knockback to what gets hit by guns
             {
-                hit.rigidbody.AddForce(-hit.normal * ImpactForce);
+                hit.rigidbody.AddForce(-hit.normal * ImpactForce); //-hit means they are getting hit backwards which is them multiplied by the impact force
             }
 
-            Instantiate(ImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Instantiate(ImpactEffect, hit.point, Quaternion.LookRotation(hit.normal)); // This is adding the bullet rickechy off ground and other surfaces (the look rotation is to make the animation play facing outwards instead of inwards towards the object)
         }
     }
 }

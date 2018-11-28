@@ -3,6 +3,7 @@
 public class EnemyDamage : MonoBehaviour {
 
     public float health = 50f;
+    public GameObject Player; 
 
     public void TakeDamage (float amount)
     {
@@ -18,4 +19,8 @@ public class EnemyDamage : MonoBehaviour {
         Destroy(gameObject);
     }
 
+    public void PlayerDie (float amount)
+    {
+        Destroy(Player);
+    }
 }
