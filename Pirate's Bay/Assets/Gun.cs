@@ -15,6 +15,7 @@ public class Gun : MonoBehaviour {
 
     private float NextTimeToFire = 0f;
 
+    AudioSource Gunshot;
 
 	// Update is called once per frame
 	void Update () {
@@ -23,7 +24,8 @@ public class Gun : MonoBehaviour {
 
             NextTimeToFire = Time.time + 1f / FireRate;
             Shoot();
-            
+            Gunshot = GetComponent<AudioSource>(); //defines Gunshot
+            Gunshot.Play(0); //Plays the gunshot
 
         }
 
