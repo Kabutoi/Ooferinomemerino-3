@@ -6,10 +6,10 @@ public class enemyai : MonoBehaviour {
     public Transform Player;
 
     public float Range = 10f;
-   
-    public float Speed = 4f;
 
-    public float Stop = 0;
+    public float Speed = 4;
+
+    public float Stop = 2;
 
     public GameObject PlayerBody;
 
@@ -17,7 +17,7 @@ public class enemyai : MonoBehaviour {
 
     
 
-    public GameObject PlayerStats;
+   
     // Update is called once per frame
     void FixedUpdate () {
 
@@ -30,12 +30,28 @@ public class enemyai : MonoBehaviour {
             transform.LookAt(Player);
 
             transform.position += transform.forward * Speed * Time.fixedDeltaTime;
+
+
+       
+
         }
+
+
+
+
 
         //sidenote this will be used for damage but for now it is empty also this small enemy is a melee enemy
         if (distance <= Stop)
         {
-            Destroy(PlayerBody);
+            Debug.Log("oof");
+            //stops the movement because it cancels out the movement
+            transform.position -= transform.forward * Speed * Time.fixedDeltaTime;
+
         }
+
+
+
+
+
     }
 }
