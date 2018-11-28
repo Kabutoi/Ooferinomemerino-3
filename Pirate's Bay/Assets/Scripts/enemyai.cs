@@ -11,12 +11,13 @@ public class enemyai : MonoBehaviour {
 
     public float Stop = 2;
 
-    public GameObject PlayerBody;
+    
 
     public Transform MyTransform;
 
-    
+    public int SmallMeleeBoisDamage = 1;
 
+    public Rigidbody Enemy;
    
     // Update is called once per frame
     void FixedUpdate () {
@@ -46,12 +47,16 @@ public class enemyai : MonoBehaviour {
             Debug.Log("oof");
             //stops the movement because it cancels out the movement
             transform.position -= transform.forward * Speed * Time.fixedDeltaTime;
+            //first this goes into the script healyh and then looks at the health vaule then  decreases it by 1 every frame
+            Player.GetComponent<Healyh>().Health -= SmallMeleeBoisDamage;
+            
+            
+
 
         }
 
 
 
-
-
+        Enemy.AddForce(0, -1000, 0);
     }
 }

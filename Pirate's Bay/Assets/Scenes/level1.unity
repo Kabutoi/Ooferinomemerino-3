@@ -998,9 +998,10 @@ MonoBehaviour:
   Player: {fileID: 1756719966}
   Range: 20
   Speed: 4
-  Stop: 5.06
-  PlayerBody: {fileID: 0}
+  Stop: 3.82
   MyTransform: {fileID: 1569181273}
+  SmallMeleeBoisDamage: 1
+  Enemy: {fileID: 1569181269}
 --- !u!54 &1569181269
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1008,13 +1009,13 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1569181267}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 36
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &1569181270
 BoxCollider:
@@ -1026,8 +1027,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.332124, y: 2.3953145, z: 3.2947643}
-  m_Center: {x: 0.2979474, y: 1.2247069, z: 0.08916546}
+  m_Size: {x: 1.7385094, y: 1.9929917, z: 2.118418}
+  m_Center: {x: -0.14685886, y: 1.0235406, z: 0.0257291}
 --- !u!23 &1569181271
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1077,8 +1078,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1569181267}
   m_LocalRotation: {x: 0.0029051641, y: -0.6564284, z: -0.0020656018, w: 0.7543799}
-  m_LocalPosition: {x: -3.96, y: 0, z: -7.36}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -4.0308, y: 0, z: -7.3628}
+  m_LocalScale: {x: 0.22888738, y: 0.6424213, z: 0.25692865}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1101,12 +1102,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
     type: 2}
   m_PrefabInternal: {fileID: 322377867}
---- !u!4 &1756719966 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
-    type: 2}
-  m_PrefabInternal: {fileID: 322377867}
---- !u!114 &1756719968
+--- !u!114 &1756719962
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1114,10 +1110,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1756719961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e514e2b075caa63478c4cc0af3bd1420, type: 3}
+  m_Script: {fileID: 11500000, guid: a5824dd3b3c39aa49b7613853746e40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  Health: 300
+--- !u!4 &1756719966 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 2}
+  m_PrefabInternal: {fileID: 322377867}
 --- !u!1001 &1893148744
 Prefab:
   m_ObjectHideFlags: 0
