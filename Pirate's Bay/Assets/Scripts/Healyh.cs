@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Healyh : MonoBehaviour {
 
     public int Health = 300;
@@ -16,6 +16,8 @@ public class Healyh : MonoBehaviour {
         if (Health <= 0)
         {
             Die();
+
+            Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
         }
 
         
