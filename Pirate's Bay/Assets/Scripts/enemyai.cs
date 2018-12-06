@@ -48,7 +48,7 @@ public class enemyai : MonoBehaviour {
             //stops the movement because it cancels out the movement
             transform.position -= transform.forward * Speed * Time.fixedDeltaTime;
             //first this goes into the script healyh and then looks at the health vaule then  decreases it by 1 every frame
-            Player.GetComponent<Healyh>().Health -= SmallMeleeBoisDamage;
+            Player.GetComponent<health>().Health -= SmallMeleeBoisDamage;
             
             
 
